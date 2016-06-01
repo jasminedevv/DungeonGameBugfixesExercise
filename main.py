@@ -105,7 +105,7 @@ def rooms_setup():
                    description='You are in a musty closet.\nThe only door is the one in through which you came.',
                    adjacent_north=None, adjacent_south=None, adjacent_east=None, adjacent_west=None)
 
-    print(repr(room_32))
+    # print(repr(room_32))
 
     # link rooms to each other (after initialization because we need refs to each room)
     room_12.adjacent_south = room_22
@@ -126,7 +126,7 @@ def rooms_setup():
 
     room_33.adjacent_west = room_32
 
-    print(repr(room_32))
+    # print(repr(room_32))
 
     return room_32
 
