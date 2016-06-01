@@ -85,6 +85,7 @@ class Player(Animal):
             self.status(current_room)
         else:  # default to showing the player what they can do
             self.help()
+            return current_room
 
         # if we are not new to this room and the room has a spider, let it attack
         if previous_room == current_room and current_room.has_thing(
@@ -253,7 +254,7 @@ class Player(Animal):
                     """Kill the spider!"""
                     current_room.contents.kill()
                     current_room.contents.update_description()
-                elif current_room.contents.health == 'wounded':
+                elif current_room.contents.health == 'alive':
                     """Wound the spider"""
                     current_room.contents.wound()
                     current_room.contents.update_description()
